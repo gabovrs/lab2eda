@@ -150,8 +150,11 @@ public class Electo {
                 System.out.println("Candidato no encontrado.");
                 return false;
             }
-            
-            Voto voto = new Voto(idCounter, votante.getID(), candidatoID, "");
+
+            String timestamp = java.time.LocalTime.now().toString();
+            timestamp = timestamp.substring(0, 8);
+
+            Voto voto = new Voto(idCounter, votante.getID(), candidatoID, timestamp);
 
             candidato.agregarVoto(voto);
             historialVotos.push(voto);
