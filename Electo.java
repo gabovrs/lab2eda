@@ -139,12 +139,7 @@ public class Electo {
                 return false;
             }
 
-            Candidato candidato = null;
-            for (Candidato c: listaCandidatos) {
-                if (c.getID() == candidatoID) {
-                    candidato = c;
-                }
-            }
+            Candidato candidato = buscarCandidato(candidatoID);
             
             if (candidato == null) {
                 System.out.println("Candidato no encontrado.");
