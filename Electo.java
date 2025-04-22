@@ -53,6 +53,10 @@ public class Electo {
             this.votosRecibidos.offer(voto);
         }
 
+        public void eliminarVoto(Voto voto) {
+            this.votosRecibidos.remove(voto);
+        }
+
         public int getID() {
             return id;
         }
@@ -165,7 +169,7 @@ public class Electo {
             for (Voto v : votos) {
                 if (v.getID() == idVoto) {
                     votosReportados.offer(v);
-                    votos.remove(v);
+                    candidato.eliminarVoto(v);
                     System.out.println("Voto reportado: " + v.getID());
                     return true;
                 }
