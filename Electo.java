@@ -132,7 +132,6 @@ public class Electo {
                     for (Voto v : candidato.getVotosRecibidos()) {
                         if (v.getVotanteID() == votante.getID()) {
                             reportarVoto(candidato, v.getID());
-                            return true;
                         }
                     }
                 }
